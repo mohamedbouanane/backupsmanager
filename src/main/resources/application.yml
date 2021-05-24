@@ -1,0 +1,39 @@
+# https://www.baeldung.com/spring-email
+# mailtrap : https://mailtrap.io/signin
+
+# build custom cron -> https://crontab.guru/
+
+properties:
+  scheduled:
+    # tous les 5 secondes
+    #autobackup.cron: "0/5 * * * * *"
+    # tout les semaines à minuit
+    autobackup-cron: "0/5 * * * * *"
+    send-welcome-email-cron: "0/5 * * * * *"
+      #welcomeemail.cron:"59 59 23 * * SUN"
+
+server:
+  port: 8083
+
+spring:
+  mail:
+    host: smtp.mailtrap.io
+    port: 2525
+    username: 066de92fa1bdc0
+    password: e03bc6ef02d807
+
+    protocol: smtp
+    test-connection: true
+    default-encoding: UTF-8
+
+
+    #mail.smtp.auth: true
+    #mail.smtp.starttls.enable: true
+    #mail.smtp.starttls.required: true
+    #mail.smtp.ssl.enable: false
+
+#config custom propt in yml -> https://www.youtube.com/watch?v=RUYV4P68hiE
+
+
+
+
