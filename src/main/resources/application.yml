@@ -1,3 +1,5 @@
+#config custom propt in yml -> https://www.youtube.com/watch?v=RUYV4P68hiE
+
 # https://www.baeldung.com/spring-email
 # mailtrap : https://mailtrap.io/signin
 
@@ -5,12 +7,12 @@
 
 properties:
   scheduled:
-    # tous les 5 secondes
-    #autobackup.cron: "0/5 * * * * *"
+    # tous les 10 secondes
+    autobackup.cron: "0/10 * * * * *"
     # tout les semaines à minuit
-    autobackup-cron: "0/5 * * * * *"
-    send-welcome-email-cron: "0/5 * * * * *"
-      #welcomeemail.cron:"59 59 23 * * SUN"
+    #autobackup-cron: "59 59 23 * * SUN"
+    auto-send-welcome-email-cron: "0/10 * * * * *"
+    #auto-send-welcome-email-cron:"59 59 23 * * SUN"
 
 server:
   port: 8083
@@ -26,13 +28,14 @@ spring:
     test-connection: true
     default-encoding: UTF-8
 
+    smtp-auth: true
+    smtp-port: 2525
+    smtp-host: smtp.mailtrap.io
+    smtp-starttls-enable: true
+    smtp-starttls-required: true
+    ssl-enable: false
 
-    #mail.smtp.auth: true
-    #mail.smtp.starttls.enable: true
-    #mail.smtp.starttls.required: true
-    #mail.smtp.ssl.enable: false
 
-#config custom propt in yml -> https://www.youtube.com/watch?v=RUYV4P68hiE
 
 
 
