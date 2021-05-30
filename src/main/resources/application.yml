@@ -8,11 +8,11 @@
 properties:
   scheduled:
     # tous les 10 secondes
-    autobackup.cron: "0/10 * * * * *"
+    autobackup-cron: "59 59 23 * * SUN"
     # tout les semaines à minuit
-    #autobackup-cron: "59 59 23 * * SUN"
     auto-send-welcome-email-cron: "0/10 * * * * *"
-    #auto-send-welcome-email-cron:"59 59 23 * * SUN"
+    #autobackup-cron: "59 59 23 * * SUN"
+    #auto-send-welcome-email-cron: "0/10 * * * * *"
 
 server:
   port: 8083
@@ -23,7 +23,6 @@ spring:
     port: 2525
     username: 066de92fa1bdc0
     password: e03bc6ef02d807
-
     protocol: smtp
     test-connection: true
     default-encoding: UTF-8

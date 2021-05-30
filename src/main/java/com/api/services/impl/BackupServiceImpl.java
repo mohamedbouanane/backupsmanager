@@ -27,7 +27,7 @@ public class BackupServiceImpl implements BackupService {
 
     @Async
     // @Scheduled -> https://www.youtube.com/watch?v=92-qLIxv0JA
-    //@Scheduled(cron = "${properties.scheduled.autobackup-cron}")
+    @Scheduled(cron = "${properties.scheduled.autobackup-cron}")
     public void autoFolderBackup() {
         try {
             var dtf = DateTimeFormatter.ofPattern("yyyy-MM-dd HH-mm-ss");

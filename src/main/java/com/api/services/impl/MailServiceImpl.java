@@ -39,17 +39,19 @@ public class MailServiceImpl implements MailService {
                 "Test d'envoie auto de message de bienvenue");
     }
 
-    public void sendSimpleMail( String from, String to, String subject, String content, String... cc) throws MailException  {
-        sendSimpleMail( from, new String[] {to}, subject, content, cc);
+    public void sendSimpleMail(String from, String to, String subject, String content, String... cc)
+            throws MailException {
+        sendSimpleMail(from, new String[] { to }, subject, content, cc);
     }
 
-    public void sendSimpleMail( String from, String[] to, String subject, String content, String... cc) throws MailException  {
+    public void sendSimpleMail(String from, String[] to, String subject, String content, String... cc)
+            throws MailException {
 
-    	SimpleMailMessage message = new SimpleMailMessage();
-    	message.setFrom(from);
-    	message.setTo(to);
-    	message.setSubject(subject);
-    	message.setText(content);
+        SimpleMailMessage message = new SimpleMailMessage();
+        message.setFrom(from);
+        message.setTo(to);
+        message.setSubject(subject);
+        message.setText(content);
 
         try {
             mailSender.send(message);
