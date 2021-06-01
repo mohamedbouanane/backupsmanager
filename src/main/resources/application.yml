@@ -7,12 +7,15 @@
 
 properties:
   scheduled:
-    # tous les 10 secondes
-    autobackup-cron: "59 59 23 * * SUN"
-    # tout les semaines à minuit
-    auto-send-welcome-email-cron: "0/10 * * * * *"
+    # Sauvegarde auto tous les 10 secondes
+    autobackup-cron: "0/10 * * * * *"
+    # Sauvegarde auto tout les semaines à minuit
     #autobackup-cron: "59 59 23 * * SUN"
+
+    # Envoi de mail tous les 10 secondes
     #auto-send-welcome-email-cron: "0/10 * * * * *"
+    # Envoi de mail tout les semaines à minuit
+    auto-send-welcome-email-cron: "59 59 23 * * SUN"
 
 server:
   port: 8083
